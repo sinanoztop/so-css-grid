@@ -1,6 +1,6 @@
 ### CSS GRID
 
-### Running project with gulp
+### Edit project with gulp
 
 - npm install
 - npm run watch
