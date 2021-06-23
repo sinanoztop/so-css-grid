@@ -1,4 +1,4 @@
-### So-CSS-GRID Project
+### CSS GRID EXAMPLES
 
 ### Running project with gulp
 
