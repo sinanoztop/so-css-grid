@@ -1,0 +1,100 @@
+@import 'nib'
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+global-reset();
+
+body
+    font-family 'Open Sans', sans-serif
+
+
+.title
+    margin-top 30px
+    text-align center
+    font-size 34px
+    font-weight 900
+
+.one
+    grid-area one
+    background url( "https://images.unsplash.com/photo-1464802686167-b939a6910659?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1033&q=80" )
+
+.two
+    grid-area two
+    background url( "https://images.unsplash.com/photo-1538370965046-79c0d6907d47?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80" )
+
+.three
+    grid-area three
+    background url( "https://images.unsplash.com/photo-1516331138075-f3adc1e149cd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1083&q=80" )
+
+.four
+    grid-area four
+    background url( "https://images.unsplash.com/photo-1530508777238-14544088c3ed?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" )
+
+.five
+    grid-area five
+    background url( "https://images.unsplash.com/photo-1528722828814-77b9b83aafb2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" )
+
+.example-grid
+    display grid
+    grid-gap 20px
+    max-width 1170px
+    margin 30px auto
+
+    .one
+        height 550px
+
+    div
+        background-repeat no-repeat
+        background-position center center
+    
+    > div
+        position relative
+        border-radius(4px)
+
+        &:after
+            content ''
+            absolute left top
+            size(100%)
+            background rgba( 0,0,0,0.7 )
+            border-radius(4px)
+            z-index 1
+    
+    .c
+        size(100%)
+        display flex
+        align-items flex-end
+        position relative
+        z-index 2
+
+        > p
+            width 100%
+            padding 20px
+
+            > span
+                display block
+
+                &:nth-child(1)
+                    font-size 24px
+                    color #fff
+                    font-weight 600
+                
+                &:nth-child(2)
+                    margin-top 10px
+                    font-size 14px
+                    color #fff
+                    font-weight 300
+
+    &.example-one
+        grid-template-areas: "one one one two two" "one one one three three" "one one one four four" "one one one five five"
+    
+    &.example-two
+        grid-template-areas: "one one one two three" "one one one two three" "one one one four five" "one one one four five"
+    
+    &.example-three
+        grid-template-areas: "one one two three four" "one one two three four" "one one two three four" "one one five five five"
+    
+    &.example-four
+        grid-template-areas: "one one two two two" "one one three four five" "one one three four five" "one one three four five"
+
+    &.example-five
+        grid-template-areas: "one one two two three" "one one two two four" "one one two two five"
